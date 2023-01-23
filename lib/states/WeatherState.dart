@@ -9,11 +9,11 @@ abstract class WeatherState extends Equatable {
   List<Object> get props => [];
 }
 
-class WeatherInitial extends WeatherState {}
+class WeatherInitial extends WeatherState {}  //когда не происходит ничего
 
-class WeatherLoadInProgress extends WeatherState {}
+class WeatherLoadInProgress extends WeatherState {} //когда мы загружаем данные о погоде
 
-class WeatherLoadSuccess extends WeatherState {
+class WeatherLoadSuccess extends WeatherState {  //когда данные загружены успешно
   final Weather weather;
   final List<Weather> hourlyWeather;
 
@@ -25,4 +25,4 @@ class WeatherLoadSuccess extends WeatherState {
   List<Object> get props => [weather, hourlyWeather];
 }
 
-class WeatherLoadFailure extends WeatherState {}
+class WeatherLoadFailure extends WeatherState {}  //когда произошла какая-то ошибка
